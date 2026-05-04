@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Kai Pietschner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar">
+    <a href="#profile" class="nav-logo">KP<span class="nav-logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#projects">Project Gallery</a></li>
+      <li><a href="#detailed">Project Details</a></li>
+      <li><a href="https://linkedin.com" target="_blank" class="nav-cta">LinkedIn ↗</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    </nav>
+
+    <main>
+    <section id="detailed" class="section section--detailed">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">02</span>
+          <h2 class="section-title">Projects Details</h2>
+          <p class="section-subtitle">In-depth breakdowns of engineering process and outcomes</p>
+        </div>
+
+        <!-- ─── Detailed Project 1 ─── -->
+        <article class="case-study" id="project-1">
+          <div class="case-study-header">
+            <div class="case-study-meta-col">
+              <span class="case-study-index">01</span>
+              <div class="case-study-meta">
+                <div class="meta-row">
+                  <span class="meta-key">Subject</span>
+                  <span class="meta-val">ENGN4300: Capstone Design Project</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Date</span>
+                  <span class="meta-val">Semester 1 - Semester 2, 2026</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Skills</span>
+                  <span class="meta-val">Power Systems · Prototyping · Stakeholder Management · Systems Engineering</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Link</span>
+                  <span class="meta-val">
+                    <a href="https://localhazardnetwork.netlify.app/" target="_blank" class="case-study-link">project landing page ↗</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="case-study-title-col">
+              <h3 class="case-study-title">Local Hazard Network</h3>
+              <span class="case-study-field">Interdisciplinary</span>
+            </div>
+          </div>
+          <div class="case-study-body">
+            <p>
+              Provide a detailed description of the project here. Explain the problem you were solving, your engineering approach, key decisions made during the design process, and any challenges you overcame. Discuss the tools and methodologies used throughout the project lifecycle.
+            </p>
+            <p>
+              Continue with results, outcomes, and what you learned. Quantify impact where possible — load ratings, efficiency improvements, performance benchmarks. Reflect on what you would do differently and how this project shaped your engineering thinking.
+            </p>
+          </div>
+        </article>
+
+        <!-- ─── Detailed Project 2 ─── -->
+        <article class="case-study" id="project-2">
+          <div class="case-study-header">
+            <div class="case-study-meta-col">
+              <span class="case-study-index">02</span>
+              <div class="case-study-meta">
+                <div class="meta-row">
+                  <span class="meta-key">Subject</span>
+                  <span class="meta-val">COMP2300: Computer Architecture</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Date</span>
+                  <span class="meta-val">Semester 1, 2026</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Skills</span>
+                  <span class="meta-val">Digital circuits · ISA design · Microarchitecture</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Link</span>
+                  <span class="meta-val">
+                    <span class="meta-val--muted">No external link</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="case-study-title-col">
+              <h3 class="case-study-title">CPU Extension</h3>
+              <span class="case-study-field">Electrical Engineering</span>
+            </div>
+          </div>
+          <div class="case-study-body">
+            <p>
+              Provide a detailed description of the project here. Explain the problem you were solving, your engineering approach, key decisions made during the design process, and any challenges you overcame. Discuss the tools and methodologies used throughout the project lifecycle.
+            </p>
+            <p>
+              Continue with results, outcomes, and what you learned. Quantify impact where possible — load ratings, efficiency improvements, performance benchmarks. Reflect on what you would do differently and how this project shaped your engineering thinking.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Kai Pietschner</span>
+      <span class="footer-copy">Hosted with GitHub Pages · <script>document.write(new Date().getFullYear())</script></span>
+      <a href="#profile" class="footer-back">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Active nav highlight on scroll ──
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { threshold: 0.35 });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ── Hamburger menu (mobile) ──
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinksList = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinksList.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // ── Scroll-reveal ──
+    const revealEls = document.querySelectorAll(
+      '.project-card, .case-study, .stat-card, .profile-portrait-wrap'
+    );
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>

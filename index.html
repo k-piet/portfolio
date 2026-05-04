@@ -1,79 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Kai Pietschner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Portfolio: Under Construction</a></li>
-            <li><a class="nav-button" href="#my-projects">Projects</a></li>
-            <li><a class="nav-button" href="#my-skills">Skills</a></li>
-            <li><a class="nav-button" href="https://www.linkedin.com/in/kpiet/">LinkedIn</a></li>
-            <li><a class="nav-button" href="mailto:kpietschner1@gmail.com">Contact</a></li>
-        </ul>
-    </nav>
-    <header>
-        <div class="flex-container">
-            <img height="350px" width="700px" src="images\20260320-IMG_0890.jpg">
-            <div class="text-container">
-                <h1>Kai Pietschner</h1>
-                <p>My drive is to create sustainability and resilience through human-centred solutions because when engineering design doesn't share those values, we can create more problems than we started with.</p>
-                <div class="allign-center">
-                    <a href="#my-projects" class="cta-button">Project Portfolio</a>
-                    <a href="#my-skills" class="cta-button">Skills Portfolio</a>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="#profile" class="nav-logo">KP<span class="nav-logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#projects">Project Gallery</a></li>
+      <li><a href="#detailed">Project Details</a></li>
+      <li><a href="https://linkedin.com" target="_blank" class="nav-cta">LinkedIn ↗</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — PROFILE
+    ═══════════════════════════════════════════════ -->
+    <section id="profile" class="section section--profile">
+      <div class="container">
+        <div class="profile-grid">
+
+          <!-- Portrait -->
+          <div class="profile-portrait-wrap">
+            <div class="profile-portrait">
+              <div class="portrait-placeholder">
+                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="100" cy="80" r="45" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <path d="M30 220 C30 170 170 170 170 220" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+                  <circle cx="100" cy="80" r="10" fill="currentColor" opacity="0.2"/>
+                </svg>
+                <span class="portrait-label">// portrait.jpg</span>
+              </div>
+              <div class="portrait-frame-corner portrait-frame-corner--tl"></div>
+              <div class="portrait-frame-corner portrait-frame-corner--tr"></div>
+              <div class="portrait-frame-corner portrait-frame-corner--bl"></div>
+              <div class="portrait-frame-corner portrait-frame-corner--br"></div>
+            </div>
+          </div>
+
+          <!-- Bio & Info -->
+          <div class="profile-info">
+            <p class="profile-label">// renewables &amp; humanitarian engineer</p>
+            <h1 class="profile-name"><br /><em>Kai Pietschner</em></h1>
+
+            <p class="profile-bio">
+              Penultimate-year <strong> Energy Engineering &amp; Humanitarian Engineering </strong> student at the Australian National Univeristy. My drive is to create sustainability and resilience through human-centred solutions because when engineering design doesn't share those values, we can create more problems than we started with.
+            </p>
+
+            <div class="profile-actions">
+              <a href="https://www.linkedin.com/in/kpiet/" target="_blank" class="btn btn--primary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+              <a href="mailto:kpietschner1@gmail.com" class="btn btn--ghost">Get in Touch</a>
+            </div>
+
+            <!-- Stats row -->
+            <div class="profile-stats">
+              <div class="stat-card">
+                <span class="stat-number">11</span>
+                <span class="stat-label">Major Projects<br/>Completed</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Major Projects<br/>In-progress</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">18</span>
+                <span class="stat-label">Courses<br/>Completed</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Years<br/>Uni Experience</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — PROJECT GALLERY
+    ═══════════════════════════════════════════════ -->
+    <section id="projects" class="section section--projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">01</span>
+          <h2 class="section-title">Project Gallery</h2>
+          <p class="section-subtitle">Selected engineering works that demonstrate my skills and experience</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <a href="#project-1" class="project-card-inner">
+              <div class="project-image">
+                <div class="project-image-placeholder">
+                  <span>PROJECT IMAGE</span>
                 </div>
-            </div>
+                <div class="project-field-badge">Interdisciplinary</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-name">Capstone: Local Hazard Network</h3>
+                <div class="project-skills">
+                  <span class="skill-tag">In-progress</span>
+                  <span class="skill-tag">Power Systems</span>
+                  <span class="skill-tag">Prototyping</span>
+                </div>
+                <span class="project-cta">View Details →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <a href="#project-2" class="project-card-inner">
+              <div class="project-image">
+                <div class="project-image-placeholder">
+                  <span>PROJECT IMAGE</span>
+                </div>
+                <div class="project-field-badge">Electronics</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-name">CPU Extension</h3>
+                <div class="project-skills">
+                  <span class="skill-tag">In-progress</span>
+                  <span class="skill-tag">Computer Architecture</span>
+                  <span class="skill-tag">Circuit Design</span>
+                </div>
+                <span class="project-cta">View Details →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <a href="#project-3" class="project-card-inner">
+              <div class="project-image">
+                <div class="project-image-placeholder">
+                  <span>PROJECT IMAGE</span>
+                </div>
+                <div class="project-field-badge">Renewable Energy</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-name">Off-grid PV System</h3>
+                <div class="project-skills">
+                  <span class="skill-tag">In-progress</span>
+                  <span class="skill-tag">Modelling</span>
+                  <span class="skill-tag">Solar Resource Analysis</span>
+                </div>
+                <span class="project-cta">View Details →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="project-card">
+            <a href="#project-4" class="project-card-inner">
+              <div class="project-image">
+                <div class="project-image-placeholder">
+                  <span>PROJECT IMAGE</span>
+                </div>
+                <div class="project-field-badge">Renewable Energy</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-name">Wind Farm Prospecting</h3>
+                <div class="project-skills">
+                  <span class="skill-tag">2025</span>
+                  <span class="skill-tag">OpenWind</span>
+                  <span class="skill-tag">Wind Resource Analysis</span>
+                </div>
+                <span class="project-cta">View Details →</span>
+              </div>
+            </a>
+          </article>
+
         </div>
-    </header>
-    <section>
-        <div class="flex-container">
-            <div class="text-container">
-                <h2>About</h2>
-                <p>About sample text</p>
-            </div>
-        </div>
+      </div>
     </section>
-    <section id="my-projects">
-        <div class="flex-container">
-            <div class="text-container">
-                <h2>Project Portfolio</h2>
-                <details>
-                    <summary>Project 1</summary>
-                    <p>Project 1 sample text</p>
-                    
-                </details>
-                <details>
-                    <summary>Project 2</summary>
-                    <p>Project 2 sample text</p>
-                </details>
-            </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — DETAILED PROJECTS (CASE STUDIES)
+    ═══════════════════════════════════════════════ -->
+    <section id="detailed" class="section section--detailed">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">02</span>
+          <h2 class="section-title">Projects Details</h2>
+          <p class="section-subtitle">In-depth breakdowns of engineering process and outcomes</p>
         </div>
-    </section>
-    <section id="my-skills">
-        <div class="flex-container">
-            <div class="text-container">
-                <h2>Skills Portfolio</h2>
-                <details>
-                    <summary>Skill 1</summary>
-                    <p>Skill 1 sample text</p>
-                </details>
-                <details>
-                    <summary>Skill 2</summary>
-                    <p>Skill 2 sample text</p>
-                </details>
+
+        <!-- ─── Detailed Project 1 ─── -->
+        <article class="case-study" id="project-1">
+          <div class="case-study-header">
+            <div class="case-study-meta-col">
+              <span class="case-study-index">01</span>
+              <div class="case-study-meta">
+                <div class="meta-row">
+                  <span class="meta-key">Subject</span>
+                  <span class="meta-val">ENGN4300: Capstone Design Project</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Date</span>
+                  <span class="meta-val">Semester 1 - Semester 2, 2026</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Skills</span>
+                  <span class="meta-val">Power Systems · Prototyping · Stakeholder Management · Systems Engineering</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Link</span>
+                  <span class="meta-val">
+                    <a href="https://localhazardnetwork.netlify.app/" target="_blank" class="case-study-link">project landing page ↗</a>
+                  </span>
+                </div>
+              </div>
             </div>
-        </div>
+            <div class="case-study-title-col">
+              <h3 class="case-study-title">Local Hazard Network</h3>
+              <span class="case-study-field">Interdisciplinary</span>
+            </div>
+          </div>
+          <div class="case-study-body">
+            <p>
+              Provide a detailed description of the project here. Explain the problem you were solving, your engineering approach, key decisions made during the design process, and any challenges you overcame. Discuss the tools and methodologies used throughout the project lifecycle.
+            </p>
+            <p>
+              Continue with results, outcomes, and what you learned. Quantify impact where possible — load ratings, efficiency improvements, performance benchmarks. Reflect on what you would do differently and how this project shaped your engineering thinking.
+            </p>
+          </div>
+        </article>
+
+        <!-- ─── Detailed Project 2 ─── -->
+        <article class="case-study" id="project-2">
+          <div class="case-study-header">
+            <div class="case-study-meta-col">
+              <span class="case-study-index">02</span>
+              <div class="case-study-meta">
+                <div class="meta-row">
+                  <span class="meta-key">Subject</span>
+                  <span class="meta-val">COMP2300: Computer Architecture</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Date</span>
+                  <span class="meta-val">Semester 1, 2026</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Skills</span>
+                  <span class="meta-val">Digital circuits · ISA design · Microarchitecture</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Link</span>
+                  <span class="meta-val">
+                    <span class="meta-val--muted">No external link</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="case-study-title-col">
+              <h3 class="case-study-title">CPU Extension</h3>
+              <span class="case-study-field">Electrical Engineering</span>
+            </div>
+          </div>
+          <div class="case-study-body">
+            <p>
+              Provide a detailed description of the project here. Explain the problem you were solving, your engineering approach, key decisions made during the design process, and any challenges you overcame. Discuss the tools and methodologies used throughout the project lifecycle.
+            </p>
+            <p>
+              Continue with results, outcomes, and what you learned. Quantify impact where possible — load ratings, efficiency improvements, performance benchmarks. Reflect on what you would do differently and how this project shaped your engineering thinking.
+            </p>
+          </div>
+        </article>
+
+      </div>
     </section>
-    <footer>
-        <a href="index.html">Back to top</a>
-        <a href="#my-projects">Projects</a>
-        <a href="#my-skills">Skills</a>
-        <a href="https://www.linkedin.com/in/kpiet/">LinkedIn</a>
-        <a href="mailto:kpietschner1@gmail.com">Contact</a>
-    </footer>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Kai Pietschner</span>
+      <span class="footer-copy">Hosted with GitHub Pages · <script>document.write(new Date().getFullYear())</script></span>
+      <a href="#profile" class="footer-back">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Active nav highlight on scroll ──
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { threshold: 0.35 });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ── Hamburger menu (mobile) ──
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinksList = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinksList.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // ── Scroll-reveal ──
+    const revealEls = document.querySelectorAll(
+      '.project-card, .case-study, .stat-card, .profile-portrait-wrap'
+    );
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+
 </body>
 </html>

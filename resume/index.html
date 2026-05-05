@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Kai Pietschner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="https://kpietgit.github.io/portfolio/" class="nav-logo">KP<span class="nav-logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="https://kpietgit.github.io/portfolio/#profile">Profile</a></li>
+      <li><a href="https://kpietgit.github.io/portfolio/#projects">Project Gallery</a></li>
+      <li><a href="https://kpietgit.github.io/portfolio/details/">Project Details</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="https://linkedin.com/in/kpiet" target="_blank" class="nav-cta">LinkedIn ↗</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <main>
+    <section>
+      
+    </section>
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Kai Pietschner</span>
+      <span class="footer-copy">Hosted with GitHub Pages · <script>document.write(new Date().getFullYear())</script></span>
+      <a href="#profile" class="footer-back">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Active nav highlight on scroll ──
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { threshold: 0.35 });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ── Hamburger menu (mobile) ──
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinksList = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinksList.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // ── Scroll-reveal ──
+    const revealEls = document.querySelectorAll(
+      '.project-card, .case-study, .stat-card, .profile-portrait-wrap'
+    );
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>

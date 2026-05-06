@@ -220,7 +220,7 @@ ul { list-style: none; }
 
 .profile-portrait {
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
   background: var(--navy-mid);
   border: 1px solid rgba(232,168,56,0.2);
   border-radius: var(--radius-lg);
@@ -231,16 +231,15 @@ ul { list-style: none; }
 }
 
 /* Replace the placeholder div with your <img> tag when ready */
-.portrait-placeholder {
+.portrait-img {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   padding: 24px;
-  color: var(--muted);
   text-align: center;
 }
-.portrait-placeholder svg { width: 100px; opacity: 0.4; }
+
 .portrait-label {
   font-family: var(--font-mono);
   font-size: 0.65rem;

@@ -197,14 +197,14 @@ ul { list-style: none; }
    SECTION 1 — PROFILE
 ══════════════════════════════════════════════════════ */
 .section--profile {
-  padding-top: calc(var(--nav-height) + 80px);
+  padding-top: calc(var(--nav-height) + 25px);
 }
 
 .profile-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 350px 1fr;
   gap: 72px;
-  align-items: start;
+  align-items: center;
 }
 
 /* Portrait */
@@ -220,7 +220,7 @@ ul { list-style: none; }
 
 .profile-portrait {
   position: relative;
-  aspect-ratio: 2/3;
+  aspect-ratio: auto;
   background: var(--navy-mid);
   border: 1px solid rgba(232,168,56,0.2);
   border-radius: var(--radius-lg);

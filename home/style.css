@@ -506,6 +506,20 @@ ul {
   border: 1px solid rgba(232,168,56,0.2);
 }
 
+.inprogress-tag {
+  background: rgba(232,168,56,0.1);
+  border: 1px solid rgba(232,168,56,0.2);
+  color: var(--amber);
+  filter: hue-rotate(90deg);
+}
+
+.complete-tag {
+  background: rgba(232,168,56,0.1);
+  border: 1px solid rgba(232,168,56,0.2);
+  color: var(--amber);
+  filter: hue-rotate(180deg);
+}
+
 .project-cta {
   font-family: var(--font-mono);
   font-size: 0.72rem;

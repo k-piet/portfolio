@@ -226,7 +226,10 @@ ul {
    DETAILS
 ══════════════════════════════════════════════════════ */
 
-.section--detailed { background: transparent; }
+.section--detailed {
+  background: transparent;
+  margin-top: calc(var(--nav-height) + 2%);
+}
 
 .case-study {
   border: 1px solid rgba(232,168,56,0.14);

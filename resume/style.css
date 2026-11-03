@@ -226,7 +226,7 @@ ul {
        RESUME
 ═══════════════════════════════════════════════ */
 
-.section--resume { margin-top: calc(var(--nav-height) + 2%); }
+.section--resume { margin-top: calc(var(--nav-height) + 5%); }
 
 
 /* ══════════════════════════════════════════════════════
